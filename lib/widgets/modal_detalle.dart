@@ -80,16 +80,19 @@ class _ModalDetalleState extends State<ModalDetalle> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                  maxHeight: maxImageHeight,
-                ),
-                child: ClipRRect(
-                  borderRadius: BorderRadius.circular(12),
-                  child: Image.network(
-                    widget.urlImagen,
-                    fit: BoxFit.cover,
-                    width: double.infinity,
+              GestureDetector(
+                onDoubleTap: _alternarLike,
+                child: ConstrainedBox(
+                  constraints: BoxConstraints(
+                    maxHeight: maxImageHeight,
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(12),
+                    child: Image.network(
+                      widget.urlImagen,
+                      fit: BoxFit.cover,
+                      width: double.infinity,
+                    ),
                   ),
                 ),
               ),

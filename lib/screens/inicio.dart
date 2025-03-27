@@ -106,7 +106,6 @@ class _InicioScreenState extends State<InicioScreen> {
                 ),
               ),
 
-              // Botones en la esquina superior derecha
               Positioned(
                 top: 10,
                 right: 10,
